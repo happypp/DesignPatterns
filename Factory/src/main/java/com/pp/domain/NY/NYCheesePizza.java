@@ -10,16 +10,16 @@ public class NYCheesePizza extends Pizza{
 
     public NYCheesePizza() {
         name = "NY Style Sauce and Cheese Pizza";
-        dough = "Thin Crust dough";
-        sauce = "Marinara sauce";
+//        dough = "Thin Crust dough";
+//        sauce = "Marinara sauce";
 
         toppings.add("Grated Reggiano Cheese");
     }
 
-//    @Override
-//    public void prepare() {
-//        log.info("芝士披萨 准备中～");
-//    }
+    @Override
+    public void prepare() {
+        System.out.println("芝士披萨 准备中～");
+    }
 //
 //    @Override
 //    public void bake() {

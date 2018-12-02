@@ -1,30 +1,27 @@
 package com.pp.domain;
 
-import lombok.extern.slf4j.Slf4j;
+import com.pp.PizzaIngredient.PizzaIngredientFactory;
+import com.pp.PizzaIngredient.domain.Cheese;
 
 /**
  * @author Created by pengpeng on 2018/12/2
  */
-@Slf4j
 public class CheesePizza extends Pizza{
+
+    PizzaIngredientFactory pizzaIngredientFactory;
+
+    public CheesePizza(PizzaIngredientFactory pizzaIngredientFactory) {
+        this.pizzaIngredientFactory = pizzaIngredientFactory;
+    }
 
     @Override
     public void prepare() {
-        log.info("芝士披萨 准备中～");
-    }
-
-    @Override
-    public void bake() {
-        log.info("芝士披萨 烘烤中～");
-    }
-
-    @Override
-    public void cut() {
-        log.info("芝士披萨 切块中～");
-    }
-
-    @Override
-    public void box() {
-        log.info("芝士披萨 装盒中～");
+        System.out.println("Preparing: " + name);
+        cheese = pizzaIngredientFactory.createCheese();
+//        clams = pizzaIngredientFactory.createClams();
+        dough = pizzaIngredientFactory.createDough();
+//        pepperoni = pizzaIngredientFactory.createPepperoni();
+        veggies = pizzaIngredientFactory.createVeggies();
+        sauce = pizzaIngredientFactory.createSauce();
     }
 }

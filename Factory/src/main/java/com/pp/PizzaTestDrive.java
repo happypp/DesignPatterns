@@ -1,6 +1,6 @@
 package com.pp;
 
-import com.pp.Store.NYStylePizzatore;
+import com.pp.Store.NYStylePizzaStore;
 import com.pp.Store.PizzaStore;
 
 /**
@@ -10,7 +10,7 @@ public class PizzaTestDrive {
 
 
     public static void main(String[] args) {
-        PizzaStore pizzaStore = new NYStylePizzatore();
+        PizzaStore pizzaStore = new NYStylePizzaStore();
         pizzaStore.orderPizza("cheese");
 
 

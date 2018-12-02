@@ -1,5 +1,7 @@
 package com.pp.domain;
 
+import com.pp.PizzaIngredient.domain.*;
+
 import java.util.ArrayList;
 
 /**
@@ -8,23 +10,31 @@ import java.util.ArrayList;
 public abstract class Pizza {
 
     protected String name;
-    protected String dough;
-    protected String sauce;
+    Dough dough;
+    Sauce sauce;
+    Veggies veggies[];
+    Cheese cheese;
+    Pepperoni pepperoni;
+    Clams clams;
+//    protected String dough;
+//    protected String sauce;
 
     protected ArrayList<String> toppings = new ArrayList<>();
 
     /**
      * 准备
      */
-    public void prepare() {
-        System.out.println("Preparing " + name);
-        System.out.println("Tossing dough...");
-        System.out.println("Adding sauce...");
-        System.out.println("Adding toppings: ");
-        for (int i = 0; i < toppings.size(); i++) {
-            System.out.println(" " + toppings.get(i));
-        }
-    };
+//    public void prepare() {
+//        System.out.println("Preparing " + name);
+//        System.out.println("Tossing dough...");
+//        System.out.println("Adding sauce...");
+//        System.out.println("Adding toppings: ");
+//        for (int i = 0; i < toppings.size(); i++) {
+//            System.out.println(" " + toppings.get(i));
+//        }
+//    };
+
+    public abstract void prepare();
 
     /**
      * 烘烤
@@ -49,6 +59,10 @@ public abstract class Pizza {
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
 }

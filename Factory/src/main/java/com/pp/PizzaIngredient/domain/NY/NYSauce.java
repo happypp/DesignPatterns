@@ -1,0 +1,9 @@
+package com.pp.PizzaIngredient.domain.NY;
+
+import com.pp.PizzaIngredient.domain.Sauce;
+
+/**
+ * @author Created by pengpeng on 2018/12/2
+ */
+public class NYSauce extends Sauce {
+}

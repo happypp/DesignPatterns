@@ -17,7 +17,7 @@ public class SimplePizzaFactory {
     public Pizza createOrder(String type) {
         Pizza pizza = null;
         if (type.equals("cheese")) {
-            pizza = new CheesePizza();
+            pizza = new CheesePizza(null);
         } else if (type.equals("greek")) {
             pizza = new GreekPizza();
         } else if (type.equals("pepperoni")) {
